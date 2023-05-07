@@ -7,7 +7,7 @@ const app = express();
 app.use(cors())
 mongoose.Promise = global.Promise;
 // Connect to the database
-mongoose.connect('mongodb+srv://sourabh:18jan2002@cluster1.bw6g0pq.mongodb.net/test', { useNewUrlParser: true}).then(()=>{
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true}).then(()=>{
     console.log('connection succes');
 }).catch((e)=>{
     console.log('no connect'+e);
